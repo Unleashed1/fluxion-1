@@ -1,6 +1,36 @@
 #!/usr/bin/env bash
 
 # ============================================================ #
+# =================< MISSING PKGES Installer >================ #
+# ============================================================ #
+# Make sure we have installed all the needed packages
+    apt-get install fuser
+    apt-get install strings
+    apt-get install rfkill
+    apt-get install openssl
+    apt-get install python
+    apt-get install pyrit
+    apt-get install php-cgi
+    apt-get install nmap
+    apt-get install mdk3
+    apt-get install macchanger
+    apt-get install lighttpd
+    apt-get install iwconfig
+    apt-get install hostapd
+    apt-get install isc-dhcp-server
+    apt-get install curl
+    apt-get install awk
+    apt-get install airodump-ng
+    apt-get install airmon-ng
+    apt-get install aireplay-ng
+    apt-get install aircrack-ng
+    apt-get install mdk3
+    apt-get install cowpatty
+    apt-get install dhcpd
+    apt-get install 7zr
+    apt-get install xterm
+
+# ============================================================ #
 # ================== < FLUXION Parameters > ================== #
 # ============================================================ #
 # Path to directory containing the FLUXION executable script.
@@ -217,7 +247,6 @@ source "$FLUXIONPath/language/en.sh"
 # ============================================================ #
 fluxion_startup() {
   if [ "$FLUXIONDebug" ]; then return 1; fi
-
   # Make sure that we save the iptable files
   iptables-save >"$FLUXIONIPTablesBackup"
   local banner=()
